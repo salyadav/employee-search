@@ -1,0 +1,36 @@
+.employeeIcon {
+    background-image: url('./employee.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px 0;
+    width: 8vw;
+    height: 8vw;
+}
+
+.card {
+    width: 30vw;
+    margin: auto;
+    margin-top: 50px;
+    padding: 25px;
+    border-radius: 25px;
+    border:none;
+    box-shadow: 0 8px 16px 0 #7fffd4;
+}
+
+.card > div {
+    font-size: 22px;
+}
+
+legend {
+    font-size: 28px;
+}
+
+.salary {
+    font-size: 38px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 70vw;
+    }
+}
