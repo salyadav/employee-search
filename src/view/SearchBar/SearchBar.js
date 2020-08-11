@@ -1,5 +1,5 @@
 import React from "react";
-import './SearchBar.css';
+import './SearchBar.scss';
 import SearchList from './SearchList';
 
 export default class SearchBar extends React.Component {

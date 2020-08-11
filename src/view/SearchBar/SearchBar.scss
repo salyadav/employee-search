@@ -1,0 +1,95 @@
+@import '../common.scss';
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $base-color; 
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $base-color; 
+}
+
+* {
+    font-size: 24px;
+    margin: auto;
+}
+
+.searchBar {
+    * {
+        padding: 0.1vw 1vw;
+        border-radius: 10px;
+    }
+}
+
+.searchField {
+    width: 35vw;
+    border: 1px solid $base-color;
+
+    input {
+        padding: 10px;
+        overflow: hidden;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    
+        &::placeholder {
+            color: $base-color;
+        }
+    }
+}
+
+
+.searchList {
+    width: 37vw;
+    list-style-type: none;
+    padding: 0; 
+    cursor: pointer;
+    max-height: 50vh;
+    overflow-y: scroll;
+    border: 1px solid $base-color;
+    box-shadow: 0 4px 8px 0 #74aff3;
+}
+
+li {
+    padding: 10px;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $highlight-color;
+    }
+    
+}
+
+.highlight {
+    font-weight: bold;
+    background-color: $highlight-color;
+}
+
+.highlight-box {
+    box-shadow: 0 4px 8px 0 $base-color;
+}
+
+@media only screen and (max-width: 1025px) {
+    .searchField {
+        width: 50vw;
+    }
+
+    .searchList {
+        width: 52vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .searchField {
+        width: 80vw;
+    }
+
+    .searchList {
+        width: 82vw;
+    }
+}

@@ -31,7 +31,14 @@ export default class App extends React.Component {
       });
     };
 
-    fetch("http://dummy.restapiexample.com/api/v1/employees")
+    // fetch("http://dummy.restapiexample.com/api/v1/employees")
+    //   .then((response) => response.json())
+    //   .then(successFn, failureFn);
+    this.fetchData('http://dummy.restapiexample.com/api/v1/employees', successFn, failureFn);
+  }
+
+  fetchData(url, successFn, failureFn) {
+    fetch(url)
       .then((response) => response.json())
       .then(successFn, failureFn);
   }
