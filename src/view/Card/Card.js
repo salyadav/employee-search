@@ -5,8 +5,14 @@ export default class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            employee: this.props.data
+            employee: {}
         }
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        return {
+            employee: props.data
+        };
     }
 
     render() {
